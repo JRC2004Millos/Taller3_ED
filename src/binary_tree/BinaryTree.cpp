@@ -173,9 +173,10 @@ void BinaryTree<T>::operacion2(int Estrato){
     if(nodo->ciudadanos != nullptr){
         if(nodo->ciudadanos->estrato == Estrato){
             cout << endl << "Nombre: " << nodo->nombre << endl;
-            for (Ciudadano &ciudadano : nodo->ciudadanos){
+            for (Ciudadano &ciudadano : nodo->leftChild->ciudadanos){
                 cout << endl << "Nombre: " << nodo->nombre << endl;
                 cout << endl << "Tierra asociada: " << nodo->nombTierras << endl;
+                
             }
         }
     }
