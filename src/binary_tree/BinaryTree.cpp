@@ -1,4 +1,7 @@
 #include "BinaryTree.hpp"
+#include "iostream"
+
+using namespace std;
 
 template <typename T>
 bool BinaryTree<T>::addNodeAux(T const &data, BinaryNode<T> *&node)
@@ -170,14 +173,12 @@ bool BinaryTree<T>::buscarID(string indi){
 template<typename T>
 void BinaryTree<T>::operacion2(int Estrato){
     BinaryNode<T>* nodo = this->raiz;
-    if(nodo->ciudadanos != nullptr){
-        if(nodo->ciudadanos->estrato == Estrato){
-            cout << endl << "Nombre: " << nodo->nombre << endl;
-            for (Ciudadano &ciudadano : nodo->leftChild->ciudadanos){
-                cout << endl << "Nombre: " << nodo->nombre << endl;
-                cout << endl << "Tierra asociada: " << nodo->nombTierras << endl;
-                
+    if(nodo->leftChild->ciudadanos != nullptr){
+            for (Ciudadano & ciudadano :: nodo->leftChild->ciudadanos){
+                if(nodo-> == Estrato){
+                   cout << endl << "Nombre: " << nodo->nombre << endl;
+                   cout << endl << "Tierra asociada: " << nodo->nombTierras << endl;
+                }   
             }
-        }
     }
 }
